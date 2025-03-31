@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'dart:io';
 
 void main() {
   runApp(MyApp());
@@ -34,9 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _exitApp() {
-    Future.delayed(Duration(milliseconds: 500), () {
-      Navigator.of(context).pop(true);
-    });
+    exit(0);
   }
 
   void _toggleTextVisibility() {
